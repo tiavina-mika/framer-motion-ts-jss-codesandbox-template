@@ -8,10 +8,6 @@ const useStyles = createUseStyles((theme: any) => ({
     composes: "flexRow justifyCenter alignCenter",
     height: "100vh",
   },
-  lineContainer: {
-    composes: "flexRow justifyCenter alignCenter flex1",
-    backgroundColor: 'green'
-  },
   animatedLine: {
     composes: "flexRow flex1",
     height: 12,
@@ -26,7 +22,6 @@ const Animated = () => {
   const classes = useStyles();
   return (
     <div className={classes.animated}>
-      <div className={classes.lineContainer}>
         <div className={classes.animatedLine}>
           <motion.div
             initial={{ width: 0 }}
@@ -36,7 +31,6 @@ const Animated = () => {
               duration: 0.8,
             }}
           />
-        </div>
       </div>
     </div>
   );
