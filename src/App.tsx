@@ -1,11 +1,16 @@
 import * as React from "react";
+import { ThemeProvider } from "react-jss";
+
+import { theme } from "../utils/theme";
+import Animated from "./components/Animated";
 import "./styles.css";
 
-export default function App() {
+const App = () => {
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Animated />
+    </ThemeProvider>
   );
-}
+};
+
+export default App;
